@@ -22,12 +22,12 @@ func getParameter() -> Parameter {
     
     var parameter:[Parameter] = []
     
-    for _ in DataManager {
-        parameter.append(DataManager.shared.preset.randomElement(),
-                         DataManager.shared.curve.randomElement(),
-                         DataManager.shared.force.description.randomElement(),
-                         DataManager.shared.duration.description.randomElement(),
-                         DataManager.shared.delay.description.randomElement()
+    for _ in DataMan {
+        parameter.append(DataMan.shared.preset.randomElement(),
+                         DataMan.shared.curve.randomElement(),
+                         DataMan.shared.force.description.randomElement(),
+                         DataMan.shared.duration.description.randomElement(),
+                         DataMan.shared.delay.description.randomElement()
         )
         
         return parameter

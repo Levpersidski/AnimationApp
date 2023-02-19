@@ -8,8 +8,9 @@
 import Foundation
 import SpringAnimation
 
-class DataManager {
-    static let shared = DataManager()
+class DataMan {
+    
+    static let shared = DataMan()
     
     var preset = AnimationPreset.allCases
     var curve  = AnimationCurve.allCases
