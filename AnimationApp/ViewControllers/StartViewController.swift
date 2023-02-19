@@ -13,12 +13,12 @@ class StartViewController: UIViewController {
     @IBOutlet var descriptionView: SpringView!
     @IBOutlet var startButton: SpringButton!
     
-    
+    var animation = Animation.init(preset: <#T##String#>, curve: <#T##String#>, force: <#T##Double#>, duration: <#T##Double#>, delay: <#T##Double#>)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var para :String
+       
 
         // Do any additional setup after loading the view.
     }
