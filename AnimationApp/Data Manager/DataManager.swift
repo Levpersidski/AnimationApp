@@ -14,9 +14,9 @@ class DataManager {
     
     var preset = AnimationPreset.allCases
     var curve  = AnimationCurve.allCases
-    var force = 0.5...1.5
-    var duration = 0.5...1.5
-    var delay  = 0.5...1
+    var force = Double.random(in: 0.5...1.5)
+    var duration = Double.random(in: 0.5...1.5)
+    var delay  = Double.random(in: 0.5...1.5)
     
     private init() {}
 }

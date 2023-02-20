@@ -17,6 +17,7 @@ struct Animation {
     
     static func getAnimation() -> Animation {
         
-        Animation.init(preset: DataManager.shared.preset.randomElement()?.rawValue ?? "", curve: DataManager.shared.curve.randomElement()?.rawValue ?? "", force: DataManager.shared.force.double.random(in 0.5...1), duration: <#T##Double#>, delay: <#T##Double#>)
+        Animation.init(preset: DataManager.shared.preset.randomElement()?.rawValue ?? "", curve: DataManager.shared.curve.randomElement()?.rawValue ?? "", force: DataManager.shared.force, duration: DataManager.shared.duration, delay: DataManager.shared.delay)
+       
     }
 }
