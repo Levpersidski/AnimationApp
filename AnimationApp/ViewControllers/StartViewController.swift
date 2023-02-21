@@ -17,7 +17,6 @@ class StartViewController: UIViewController {
     @IBOutlet var curveLabel: UILabel!
     @IBOutlet var forceLabel: UILabel!
     @IBOutlet var durationLabel: UILabel!
-    
     @IBOutlet var delayLabel: UILabel!
     
     var animation = Animation.getAnimation()
