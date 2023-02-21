@@ -9,7 +9,7 @@ import UIKit
 import SpringAnimation
 
 class StartViewController: UIViewController {
-
+    
     @IBOutlet var descriptionView: SpringView!
     @IBOutlet var startButton: SpringButton!
     
@@ -25,20 +25,22 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presetLabel.text = "Preset:"
+        curveLabel.text = "Curve : None"
+        forceLabel.text = "Force : None"
+        durationLabel.text = "Duration: None"
+        delayLabel.text = "Delay: None"
+        startButton.setTitle("Run", for: .normal)
+        
+    }
+    
+    @IBAction func startButtonPressed(_ sender: SpringButton) {
+        
         presetLabel.text = "Preset: \(animation.preset)"
         curveLabel.text = "Curve : \(animation.curve)"
         forceLabel.text = "Force : \(round(100 * animation.force)/100)"
         durationLabel.text = "Duration: \(round(100 * animation.duration)/100)"
         delayLabel.text = "Delay: \(round(100 * animation.delay)/100)"
-        
-        startButton.setTitle("\(animation.preset)", for: .normal)
-       
-       
-
-        // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func StartButtonPressed(_ sender: SpringButton) {
         
         descriptionView.animation = animation.preset
         descriptionView.curve = animation.curve
@@ -47,18 +49,11 @@ class StartViewController: UIViewController {
         descriptionView.delay = animation.delay
         descriptionView.animate()
         sender.animate()
-        loadViewIfNeeded()
-    
+        
+        animation = Animation.getAnimation()
+        startButton.setTitle("\(animation.preset)", for: .normal)
+        
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
